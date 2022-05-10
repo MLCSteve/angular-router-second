@@ -1,6 +1,7 @@
 import {Component, Input, OnInit} from '@angular/core';
-import {ActivatedRoute} from "@angular/router";
-import {LessonSummary} from "../model/lesson-summary";
+import {ActivatedRoute, Router} from '@angular/router';
+import { LessonDetail } from '../model/lesson-detail';
+import {LessonSummary} from '../model/lesson-summary';
 
 @Component({
   selector: 'lessons-list',
@@ -9,15 +10,15 @@ import {LessonSummary} from "../model/lesson-summary";
 })
 export class LessonsListComponent implements OnInit {
 
-  lessons:LessonSummary[];
+  lessons: LessonSummary[];
 
-  constructor(private route:ActivatedRoute) {
+  constructor(private route: ActivatedRoute) {
 
   }
 
   ngOnInit() {
 
-    this.lessons = this.route.snapshot.data["lessons"];
+    this.lessons = this.route.snapshot.data['lessons'];
 
   }
 

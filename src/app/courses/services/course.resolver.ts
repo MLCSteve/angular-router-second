@@ -15,7 +15,7 @@ export class CourseResolver implements Resolve<Course> {
     resolve(route: ActivatedRouteSnapshot, state: RouterStateSnapshot):
         Observable<Course> {
 
-        const courseUrl = route.paramMap.get("courseUrl");
+        const courseUrl = route.paramMap.get('courseUrl');
 
         return this.courses.loadCourseByUrl(courseUrl);
     }
